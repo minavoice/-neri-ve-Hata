@@ -3,231 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINAVOICE | PRO Geliştirme Hattı</title>
+    <title>MINAVOICE | BİLDİRİM MERKEZİ</title>
     <style>
         :root {
-            /* Renk Paleti - Canlı ve Modern */
-            --bg-deep: #0f172a; /* Derin Gece Mavisi */
-            --bg-card: #1e293b; /* Koyu Gri Mavi */
-            --primary: linear-gradient(90deg, #ff8a00 0%, #e52e71 50%, #9333ea 100%); /* Canlı Geçiş */
-            --accent: #fbc02d; /* Altın Sarısı */
-            --text-main: #f1f5f9;
-            --text-label: #a1a1aa;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --glass-focus: rgba(229, 46, 113, 0.2);
-            --radius-pro: 20px;
-            --shadow-pro: 0 10px 40px rgba(0,0,0,0.5);
-            --transition-pro: all 0.3s ease;
+            --bg: #0b0e14;
+            --card: #161b22;
+            --primary: linear-gradient(135deg, #ff8a00, #e52e71);
+            --gold: #fcc419;
+            --white: #ffffff;
+            --gray: #8b949e;
         }
 
-        /* Temel Ayarlar */
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-deep);
-            color: var(--text-main);
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 460px; /* iPhone 13 Pro Max genişliği */
-            padding-bottom: 50px;
-        }
-
-        /* 1. ÜST BAŞLIK ALANI (Premium Gradient) */
-        .main-header {
-            background: var(--primary);
-            width: 100%;
-            padding: 40px 15px;
-            border-radius: var(--radius-pro);
-            text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 15px 50px rgba(229, 46, 113, 0.4);
-            border: 3px solid rgba(251, 192, 45, 0.4); /* Altın çerçeve */
-            position: relative;
-            overflow: hidden;
-        }
-        .main-header h1 {
-            margin: 0;
-            font-size: 26px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 900;
-            text-shadow: 0 3px 6px rgba(0,0,0,0.5);
-        }
-        .main-header p {
-            margin: 10px 0 0 0;
-            font-size: 13px;
-            color: rgba(255,255,255,0.8);
-            font-weight: bold;
-        }
-
-        /* 2. FORM KUTUSU (Premium/Glassmorphism) */
-        .rule-item {
-            background-color: var(--bg-card);
-            border-radius: var(--radius-pro);
-            margin-bottom: 30px;
-            overflow: hidden;
-            border: 2px solid var(--glass-border);
-            box-shadow: var(--shadow-pro);
-            backdrop-filter: blur(5px);
-            position: relative;
-        }
-
-        /* Form Başlık Çubuğu */
-        .rule-header-top {
-            background-color: var(--accent);
-            color: #000;
-            padding: 15px;
-            font-weight: 900;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 1px;
-            border-bottom: 3px solid #b78f00; /* Koyu altın şerit */
-        }
-        
-        /* Formun Ana Alanı */
-        .content-area {
-            padding: 25px;
-            font-size: 14px;
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        /* 3. PRO FORM ALANLARI (Glassmorphism Inputs) */
-        form { display: flex; flex-direction: column; gap: 15px; }
-
-        label {
-            color: var(--accent);
-            font-size: 11px;
-            text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 1px;
-            margin-bottom: -5px;
-            padding-left: 5px;
-        }
-
-        input[type="text"], 
-        select, 
-        textarea {
-            width: 100%;
-            padding: 16px 20px;
-            border-radius: 12px;
-            border: 1px solid var(--glass-border);
-            background: var(--glass-bg); /* Hafif şeffaf */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
             color: var(--white);
-            font-family: inherit;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container { width: 100%; max-width: 450px; }
+
+        .header {
+            background: var(--primary);
+            padding: 30px 20px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(229, 46, 113, 0.3);
+            margin-bottom: 25px;
+        }
+        .header h1 { margin: 0; font-size: 24px; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; }
+        .header p { margin: 8px 0 0; font-size: 13px; font-weight: 600; opacity: 0.9; }
+
+        .form-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 24px;
+            border: 1px solid #30363d;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .form-group { margin-bottom: 18px; }
+        
+        label {
+            display: block;
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            color: white;
             font-size: 14px;
             box-sizing: border-box;
             outline: none;
-            transition: var(--transition-pro);
-            appearance: none; /* Özel select ok */
-        }
-        /* Select oku (Büyük telefonlarda daha düzgün) */
-        select {
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22%20fill%3D%22%23a1a1aa%22/%3E%3C/svg%3E');
-            background-repeat: no-repeat;
-            background-position: calc(100% - 15px) center;
-            background-size: 15px;
+            transition: 0.3s;
         }
 
         input:focus, select:focus, textarea:focus {
             border-color: #ff8a00;
-            box-shadow: 0 0 15px var(--glass-focus);
-            background-color: rgba(255,255,255,0.06);
         }
-        textarea { resize: none; }
 
-        /* 4. PRO BUTON (Canlı Gradient & Gölge) */
-        .submit-btn {
-            background: linear-gradient(90deg, #ff8a00 0%, #e52e71 50%, #ff8a00 100%);
-            background-size: 200% auto;
-            color: var(--white);
-            padding: 20px;
+        /* DOSYA ALANI */
+        input[type="file"] {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed #30363d;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary);
             border: none;
             border-radius: 50px;
+            color: white;
             font-weight: 900;
-            font-size: 15px;
+            font-size: 14px;
+            text-transform: uppercase;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 15px;
-            transition: var(--transition-pro);
-            box-shadow: 0 8px 30px rgba(229, 46, 113, 0.4);
-        }
-        .submit-btn:hover {
-            background-position: right center; /* Gradient hareketi */
-            box-shadow: 0 10px 40px rgba(229, 46, 113, 0.6);
-            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(229, 46, 113, 0.3);
+            margin-top: 10px;
+            transition: 0.3s;
         }
 
-        /* 5. RESMİ FOOTER (Sade ve Modern) */
-        .footer {
-            text-align: center;
-            padding: 50px 20px;
-            color: rgba(255,255,255,0.3);
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(229, 46, 113, 0.5); }
 
-        /* Mobil Optimizasyon */
-        @media (max-width: 400px) {
-            .main-header h1 { font-size: 20px; }
-            .rule-header-top { font-size: 14px; }
-            .submit-btn { font-size: 13px; padding: 16px; }
-        }
+        .footer { text-align: center; margin-top: 35px; font-size: 11px; color: var(--gray); font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="main-header">
-        <h1>MINAVOICE | PRO</h1>
-        <p>Geliştirme Öneri & Hata Bildirim Hattı</p>
+<div class="container">
+    <div class="header">
+        <h1>MINAVOICE</h1>
+        <p>GELİŞTİRME & HATA BİLDİRİMİ</p>
     </div>
 
-    <div class="container">
-        <div class="rule-item">
-            <div class="rule-header-top">BİLDİRİM FORMU</div>
+    <div class="form-card">
+        <form action="https://formspree.io/f/xbdzyown" method="POST" enctype="multipart/form-data">
             
-            <div class="content-area">
-                <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 25px; font-size: 13px;">
-                    Uygulamayı birlikte geliştirelim. Tavsiyenizi veya hatayı iletin, anında inceleyelim.
-                </p>
-
-                <form action="https://formspree.io/f/xyzaabbcc" method="POST">
-                    <label for="kullanici_id">Kullanıcı Adı / ID</label>
-                    <input type="text" id="kullanici_id" name="kullanici" placeholder="Örn: 123456 / Malkafa" required>
-
-                    <label for="konu">Bildirim Türü</label>
-                    <select id="konu" name="konu" required>
-                        <option value="" disabled selected>Bize ne ileteceksiniz?</option>
-                        <option value="Uygulama Tavsiyesi">💡 Uygulama Tavsiyesi</option>
-                        <option value="Hata / Bug">🛠️ Hata / Bug Bildirimi</option>
-                        <option value="Diger">📝 Diğer</option>
-                    </select>
-
-                    <label for="mesaj">Mesajınız</label>
-                    <textarea id="mesaj" name="mesaj" rows="6" placeholder="Detaylıca anlatır mısın?" required></textarea>
-                    
-                    <button type="submit" class="submit-btn">YÖNETİME İLET VE BİLDİRİM AT</button>
-                </form>
+            <div class="form-group">
+                <label>Kullanıcı ID / İsim</label>
+                <input type="text" name="user_id" placeholder="Örn: 123456" required>
             </div>
-        </div>
 
-        <div class="footer">
-            MINAVOICE TÜRKİYE YÖNETİM EKİBİ<br>
-            2026 RESMİ YAYIN
-        </div>
+            <div class="form-group">
+                <label>Bildirim Türü</label>
+                <select name="category" required>
+                    <option value="Uygulama Tavsiyesi">💡 Uygulama Tavsiyesi</option>
+                    <option value="Hata Bildirimi">🛠️ Hata / Bug Bildirimi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Açıklamanız</label>
+                <textarea name="message" rows="5" placeholder="Lütfen detayları yazın..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Ekran Görüntüsü / Video (Opsiyonel)</label>
+                <input type="file" name="attachment" accept="image/*,video/*">
+            </div>
+
+            <button type="submit" class="btn">GÖNDER</button>
+        </form>
     </div>
 
-</body>
-</html>
+    <div class="footer">MINAV
+        
