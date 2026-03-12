@@ -35,7 +35,6 @@
             margin-bottom: 25px;
         }
         .header h1 { margin: 0; font-size: 24px; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; }
-        .header p { margin: 8px 0 0; font-size: 13px; font-weight: 600; opacity: 0.9; }
 
         .form-card {
             background: var(--card);
@@ -43,6 +42,14 @@
             border-radius: 24px;
             border: 1px solid #30363d;
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .intro-msg {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
 
         .form-group { margin-bottom: 18px; }
@@ -60,8 +67,8 @@
         input, select, textarea {
             width: 100%;
             padding: 12px 15px;
-            background: rgba(0,0,0,0.3);
-            border: 1px solid #30363d;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid #444c56;
             border-radius: 12px;
             color: white;
             font-size: 14px;
@@ -72,13 +79,13 @@
 
         input:focus, select:focus, textarea:focus {
             border-color: #ff8a00;
+            background: rgba(0,0,0,0.6);
         }
 
-        /* DOSYA ALANI */
         input[type="file"] {
             padding: 10px;
             background: rgba(255, 255, 255, 0.05);
-            border: 2px dashed #30363d;
+            border: 2px dashed #444c56;
             cursor: pointer;
             font-size: 12px;
         }
@@ -109,10 +116,13 @@
 <div class="container">
     <div class="header">
         <h1>MINAVOICE</h1>
-        <p>GELİŞTİRME & HATA BİLDİRİMİ</p>
     </div>
 
     <div class="form-card">
+        <div class="intro-msg">
+            MINAVOICE'u birlikte geliştirelim. Tavsiyenizi veya karşılaştığınız hatayı bize iletin.
+        </div>
+
         <form action="https://formspree.io/f/xbdzyown" method="POST" enctype="multipart/form-data">
             
             <div class="form-group">
@@ -123,24 +133,30 @@
             <div class="form-group">
                 <label>Bildirim Türü</label>
                 <select name="category" required>
+                    <option value="" disabled selected>Bir kategori seçin</option>
                     <option value="Uygulama Tavsiyesi">💡 Uygulama Tavsiyesi</option>
-                    <option value="Hata Bildirimi">🛠️ Hata / Bug Bildirimi</option>
+                    <option value="Hata / Bug Bildirimi">🛠️ Hata Bug Bildirimi</option>
+                    <option value="Diğer">📝 Diğer</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label>Açıklamanız</label>
-                <textarea name="message" rows="5" placeholder="Lütfen detayları yazın..." required></textarea>
+                <textarea name="message" rows="5" placeholder="Detayları buraya yazabilirsiniz..." required></textarea>
             </div>
 
             <div class="form-group">
-                <label>Ekran Görüntüsü / Video (Opsiyonel)</label>
+                <label>Görsel / Video Kanıtı (Opsiyonel)</label>
                 <input type="file" name="attachment" accept="image/*,video/*">
             </div>
 
-            <button type="submit" class="btn">GÖNDER</button>
+            <button type="submit" class="btn">BİLDİRİMİ GÖNDER</button>
         </form>
     </div>
 
-    <div class="footer">MINAV
-        
+    <div class="footer">MINAVOICE TÜRKİYE © 2026</div>
+</div>
+
+</body>
+</html>
+
