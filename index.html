@@ -1,0 +1,30 @@
+<div class="rule-item" style="margin-top: 50px; border-color: #ff8a00;">
+    <div class="rule-header-top" style="background: linear-gradient(90deg, #ff8a00, #e52e71); color: #fff;">GELİŞTİRME & HATA BİLDİRİMİ</div>
+    <div class="content-area">
+        <p style="font-size: 13px; color: #ccc; text-align: center; margin-bottom: 20px;">
+            MINAVOICE'ı birlikte geliştirelim. Tavsiyenizi veya karşılaştığınız hatayı bize iletin.
+        </p>
+        
+        <form action="https://formspree.io/f/xbdzyown" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            
+            <label style="color: var(--gold); font-weight: bold; font-size: 11px; text-transform: uppercase;">Kullanıcı ID / İsim</label>
+            <input type="text" name="kullanici" placeholder="Örn: 1234567" required 
+                   style="padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; outline: none;">
+            
+            <label style="color: var(--gold); font-weight: bold; font-size: 11px; text-transform: uppercase;">Bildirim Türü</label>
+            <select name="bildirim_turu" style="padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; outline: none;">
+                <option value="Uygulama Tavsiyesi">💡 Uygulama Tavsiyesi</option>
+                <option value="Hata Bildirimi">🛠️ Hata / Bug Bildirimi</option>
+            </select>
+
+            <label style="color: var(--gold); font-weight: bold; font-size: 11px; text-transform: uppercase;">Açıklamanız</label>
+            <textarea name="mesaj" rows="5" placeholder="Tavsiyenizi veya karşılaştığınız hatayı detaylıca anlatın..." required 
+                      style="padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; outline: none; resize: none;"></textarea>
+            
+            <button type="submit" style="background: linear-gradient(90deg, #ff8a00, #e52e71); color: #fff; padding: 18px; border: none; border-radius: 50px; font-weight: 900; cursor: pointer; text-transform: uppercase; box-shadow: 0 5px 15px rgba(229, 46, 113, 0.4); margin-top: 10px;">
+                BİLDİRİMİ GÖNDER
+            </button>
+        </form>
+    </div>
+</div>
+
